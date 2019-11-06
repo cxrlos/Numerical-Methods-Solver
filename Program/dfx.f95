@@ -1,3 +1,11 @@
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! Author: Carlos García (cxrlos)                                               !
+!                                                                              !
+! Description: FORTRAN Program designed to input a the derived function on the !
+! fx program.                                                                  !
+!                                                                              !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 module dfx
   implicit none
   double precision, public :: in_dfx

@@ -1,8 +1,5 @@
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-! Authors: Carlos García (cxrlos)                                              !
-!          Hector Reyes                                                        !
-!          Rubén Hernández                                                     !
-!          Daniela Vignau (dvigleo)                                            !
+! Author: Carlos García (cxrlos)                                               !
 !                                                                              !
 ! Description: FORTRAN Program designed to solve diffferent types of mathema-  !
 ! tical problems. All of the algorithms for the code have been developed but   !
@@ -18,7 +15,7 @@ program Main
   integer :: menuInputA,menuInputB, c, cycles
   double precision :: tolerance, inputA, inputB
 
-  print *, char(7) !Sound
+  print*, char(7) !Sound
   print*, achar(27)//"[2J" !Terminal spacing
   print*, " __      __        __                               "
   print*, "/  \    /  \ ____ |  |   ____  ____   _____   ____  "
