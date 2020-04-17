@@ -1,10 +1,6 @@
 # Numerical Methods Solver
 ## Author:
-[Carlos García](https://github.com/cxrlos)
-[Yann Le Lorier](https://github.com/)
-
-## Description
-*FORTRAN and Racket programs designed to solve different types of mathematical problems using numerical methods
+[Carlos García](https://github.com/cxrlos)                                                                                         
 
 ## Methods Included
 ### Non-Linear Equations
