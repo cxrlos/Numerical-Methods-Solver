@@ -1,8 +1,11 @@
 # FORTRAN Numerical Methods Solver
 
 ## Run
+Go to the Program folder and type in the following commands:
 
-`gfortran ...`
+`gfortran dfx.f95 fx.f95 Secant.f95 Bisection.f95 FalsePosition.f95 fxfy.f95  NewtonRaphson.f95 Main.f95 -o NMSolver`\
+`rm *.mod *.smod`\
+`./NMSolver`
 
 ## Methods Included
 
