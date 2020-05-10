@@ -51,4 +51,9 @@ Euler's method consists of an estimated value that works with the slope of two p
 
 Due to the complex nature of differential equations calculations, Euler's method will be the function to implement due to it's acceptable precision and easy-to-implement nature.
 
-## Aqui va en dónde están implementados los conceptos de la clase
+## Topics that will be used
+
+- **Recursion.** This topic will be used extensively in the project as all the iterations will be done using recursion
+- **Lists.** Lists will be used to store the initial information of the target function to apply the method, as well as a possible way to store results after each method iteration
+- **File I/O.** The files will be used to store initial information of the functions, meaning that calculations can be done by uploading a single document that was prepared beforehand
+- **Functional programming.** as the language that was chosen for this project is Racket, it leans towards accepted functional programming 'good practices'
