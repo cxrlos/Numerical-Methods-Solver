@@ -50,3 +50,5 @@ Euler's method consists of an estimated value that works with the slope of two p
 ![Euler](http://www.sciweavers.org/upload/Tex2Img_1589079325/render.png)
 
 Due to the complex nature of differential equations calculations, Euler's method will be the function to implement due to it's acceptable precision and easy-to-implement nature.
+
+## Aqui va en dónde están implementados los conceptos de la clase
