@@ -48,6 +48,7 @@ The real life usage of the method is identical from the Integration method, but 
 Euler's method consists of an estimated value that works with the slope of two points within a function to extrapolate the value every "h" units represented as the "step". The representation is the following:
 
 ![Euler](http://www.sciweavers.org/upload/Tex2Img_1589079325/render.png)
+$$fx_x$$
 
 Due to the complex nature of differential equations calculations, Euler's method will be the function to implement due to it's acceptable precision and easy-to-implement nature.
 
