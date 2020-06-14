@@ -1,6 +1,6 @@
 #lang racket
 
-(require "Fractals.rkt")
+(require "Functions.rkt")
 (require 2htdp/image)
 
 (define triangles (sierpinski-triangle 3))
