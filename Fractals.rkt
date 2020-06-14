@@ -12,3 +12,6 @@
 (define (next-size s)
   (/ s 2))
 
+(define (test)
+  (circle 100 "solid" "red"))
+
