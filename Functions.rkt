@@ -18,11 +18,14 @@
 (provide sierpinski koch) ; Sends the functions to Main.rkt
 (require 2htdp/image) ; Package for images
 
+
 ; --- NOTE ---
 ; Some functions were not seen in class but were found in the documentation
 ; https://docs.racket-lang.org/teachpack/2htdpuniverse.html
 ; https://docs.racket-lang.org/teachpack/2htdpimage-guide.html
 
+
+; --- SIERPINSKI ---
 (define (sierpinski levels)
   (if (not (zero? levels))
       
@@ -38,13 +41,24 @@
       ; Base case, draws a triangle
       (triangle 20 "outline" "black")))
 
-(define (koch n)
+
+
+; --- KOCH --- 
+(define (koch-helper n)
   (cond
     [(zero? n) (line 20 0 (pen "black" 8 "solid" "butt" "miter"))]
     [else
-     (local [(define smaller (koch (- n 1)))]
+     (local [(define smaller (koch-helper (- n 1)))]
        (beside/align "bottom"
                      smaller
                      (rotate 60 smaller)
                      (rotate -60 smaller)
                      smaller))]))
+
+(define  (koch n)
+  (above
+   (beside
+    (rotate 60 (koch-helper 5))
+    (rotate -60 (koch-helper 5)))
+   (flip-vertical (koch-helper 5))))
+

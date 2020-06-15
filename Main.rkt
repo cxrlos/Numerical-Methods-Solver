@@ -10,13 +10,14 @@
 (fprintf (current-output-port)"|                                              |\n")
 (fprintf (current-output-port)"  ____________________________________________  \n")
 (fprintf (current-output-port)"\n")
+
 (writeln 'Processing_Sierpinski...)
 (define triangles (sierpinski 7))
 (define bg1 (rectangle (image-width triangles) (image-height triangles) "solid" "white"))
 (save-svg-image (overlay/align "center" "bottom" triangles bg1) "sierpinski.svg")
 
 (writeln 'Processing_Koch...)
-(define curve (koch 3))
+(define curve (koch 8))
 (define bg (rectangle (image-width curve) (image-height curve) "solid" "white"))
 (save-svg-image (overlay/align "center" "bottom" curve bg) "koch.svg")
 
