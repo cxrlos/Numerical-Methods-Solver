@@ -8,7 +8,7 @@
 
 # Fractal image generation in Racket 
 <p align="center">
-<img src="koch.svg" alt="Koch Fractal" width="300"/><br>
+<img src="koch.svg" alt="Koch Fractal" width="300"/>
 <img src="sierpinski.svg" alt="Sierpinski Fractal" width="300"/>
 </p>
 
