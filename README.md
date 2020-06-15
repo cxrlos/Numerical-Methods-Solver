@@ -7,9 +7,10 @@
     *-------------------------------------------------------------------->
 
 # Fractal image generation in Racket 
-
+<p align="center">
 <div style="text-align:center"><img src="koch.svg" alt="Koch Fractal" width="300"/></div>
 <div style="text-align:center"><img src="sierpinski.svg" alt="Sierpinski Fractal" width="300"/></div>
+</p>
 
 ## 1. Authors
 
