@@ -2,6 +2,7 @@
 
 (require "Functions.rkt")
 (require 2htdp/image)
+(require data/monad)
 (require megaparsack megaparsack/text)
 
 (define si/p
@@ -18,28 +19,30 @@
         [x <- integer/p]
         (pure x)))
 
-; (define req/p
-;     (do [x <- letter/p]
-;         (space/p)
+;;NOT WORKING (taken from https://docs.racket-lang.org/megaparsack/parsing-basics.html)
+; (define add-two-ints/p
+;     (do [x <- integer/p]
+;         (char/p #\,)
 ;         [y <- integer/p]
 ;         (pure (+ x y))))
 
-(define (lines in)
-    (let loop
-        ([iter 0])
-        (define line (read-line in))
-        (if (eof-object? line)
-            result
-            ; Each line contains a number, so it must be converted
+
+(define (multi-read in)
+    (define line (read-line in))
+    (if (eof-object? line)
+        (display "Finished processing requests")
+        (begin
             (cond 
-                [(parse-string si/p line) (loop (parse-string si/p line))]
-                [(parse-string ko/p line) (loop (parse-string ko/p line))]))))
+                ((parse-string si/p line) (sierpinski-triangle (parse-string si/p line)))
+                ((parse-string ko/p line) (koch-curve (parse-string ko/p line))))
+            (multi-read in))))
 
+(call-with-input-file "drawRequests.txt" multi-read)
 
-(define triangles (sierpinski-triangle 750))
-(define bg1 (rectangle (image-width triangles) (image-height triangles) "solid" "white"))
+(define triangles (sierpinski-triangle 3))
+(define bg1 (rectangle (image-width triangles) (image-height triangles) "solid" "black"))
 (save-svg-image (overlay/align "center" "bottom" triangles bg1) "sierpinski.svg")
 
 (define curve (koch-curve 5))
-(define bg (rectangle (image-width curve) (image-height curve) "solid" "white"))
+(define bg (rectangle (image-width curve) (image-height curve) "solid" "black"))
 (save-svg-image (overlay/align "center" "bottom" curve bg) "koch.svg")
