@@ -10,7 +10,7 @@
 
 ![Koch](koch.svg)
 
-![Sierpinski](sierpinski.svg =250x)
+![Sierpinski](sierpinski.svg)
 
 ## 1. Authors
 
