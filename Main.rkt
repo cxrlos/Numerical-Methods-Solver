@@ -12,12 +12,12 @@
 (fprintf (current-output-port)"\n")
 
 (writeln 'Processing_Sierpinski...)
-(define triangles (sierpinski 7))
-(define bg1 (rectangle (image-width triangles) (image-height triangles) "solid" "white"))
-(save-svg-image (overlay/align "center" "bottom" triangles bg1) "sierpinski.svg")
+(define sierpinski_image (sierpinski 7))
+(define sierpinski_back (rectangle (image-width sierpinski_image) (image-height sierpinski_image) "solid" "white"))
+(save-svg-image (overlay/align "center" "bottom" sierpinski_image sierpinski_back) "sierpinski.svg")
 
 (writeln 'Processing_Koch...)
-(define curve (koch 8))
+(define curve (koch 6))
 (define bg (rectangle (image-width curve) (image-height curve) "solid" "white"))
 (save-svg-image (overlay/align "center" "bottom" curve bg) "koch.svg")
 

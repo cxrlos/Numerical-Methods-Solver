@@ -56,5 +56,5 @@ The program serves as a study to analyze behavior of fractals construction, and 
 
 ## 7. Running the program
 
-Clone or download the repository. Read the [Template.txt](https://github.com/cxrlos/Numerical-Methods-Solver/blob/master/Template.txt) file to modify the **MISSING INPUT FILE** file.\
+Clone or download the repository. Read the [Instructions.txt](https://github.com/cxrlos/Numerical-Methods-Solver/blob/master/Instructions.txt) file to modify the [Configurations.txt](https://github.com/cxrlos/Numerical-Methods-Solver/blob/master/Configuration.txt) file.\
 After the desired values are set, simply open DrRacket, open the [Main.rkt](https://github.com/cxrlos/Numerical-Methods-Solver/blob/master/Main.rkt) script and click on the "Run" button at the top. The output images should be displayed in the same directory as the scripts.

@@ -19,19 +19,23 @@
 (require 2htdp/image) ; Package for images
 
 
-; --- NOTE ---
+; --- NOTES ---
 ; Some functions were not seen in class but were found in the documentation
-; https://docs.racket-lang.org/teachpack/2htdpuniverse.html
-; https://docs.racket-lang.org/teachpack/2htdpimage-guide.html
+; [1] https://docs.racket-lang.org/teachpack/2htdpimage.html
+; [2] https://docs.racket-lang.org/teachpack/2htdpuniverse.html
+; [3] https://docs.racket-lang.org/teachpack/2htdpimage-guide.html
+
+; To understand the behavior of the algorithms, the following resources were useful:
+; https://www.geeksforgeeks.org/sierpinski-triangle/
+; https://www.geeksforgeeks.org/koch-curve-koch-snowflake/
 
 
 ; --- SIERPINSKI ---
 (define (sierpinski levels)
+  ; Goes through the algorithm until it reaches the last level
   (if (not (zero? levels))
-      
       ; Function used in 2htdp/image scenarios, adapted it to our reqs.
       (local
-        
         ; Defines the next-level that the algorithm should process
         ((define next-level (sierpinski (- levels 1))))
         
@@ -42,23 +46,34 @@
       (triangle 20 "outline" "black")))
 
 
-
 ; --- KOCH --- 
-(define (koch-helper n)
-  (cond
-    [(zero? n) (line 20 0 (pen "black" 8 "solid" "butt" "miter"))]
-    [else
-     (local [(define smaller (koch-helper (- n 1)))]
-       (beside/align "bottom"
-                     smaller
-                     (rotate 60 smaller)
-                     (rotate -60 smaller)
-                     smaller))]))
+(define (koch-helper levels) 
+  ; Goes through the algorithm until it reaches the last level
+  (if (not(zero? levels))
 
-(define  (koch n)
-  (above
-   (beside
-    (rotate 60 (koch-helper 5))
-    (rotate -60 (koch-helper 5)))
-   (flip-vertical (koch-helper 5))))
+      (local 
+        ; Defines the next-level that the algorithm should process
+        ((define next-level (koch-helper (- levels 1))))
+             
+             ; Attaches the next-level triangles to the reference triangle
+             ; beside/align function adapted from examples in [1]
+             (beside/align "bottom"
+                           next-level
+                           (rotate 60 next-level)
+                           (rotate -60 next-level)
+                           next-level))
+
+      ; Base case, draws a line with custom specifications
+      ; See [1] for further customization 
+      (line 25 0 (pen "black" 10 "solid" "round" "bevel"))))
+
+
+(define (koch levels)
+  ; The following creates what is known as Koch curves at different angles
+  ; These curves combined create the snowflake
+  (above (beside
+          (rotate 60 (koch-helper levels))
+          (rotate -60 (koch-helper levels)))
+    ; Based on examples used at [1]
+    (flip-vertical (koch-helper levels))))
 
