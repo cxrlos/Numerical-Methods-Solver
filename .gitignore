@@ -74,4 +74,4 @@ tags
 
 .rkt#*
 compiled/
-.svg
+*.svg

@@ -17,49 +17,38 @@
 
 ## 2. Context
 
-TBD
+Fractals are as beautiful to see as they are helpful in different scenarios. They are a relevant case study in the field of mathematics, as they are able to represent complex landscapes such as mountain ranges, or even create a visualization of the spread of bacteria.
 
 ## 3. Project Description
 
-### 3. 1 Spiral 
+The project's objective is to study how fractals are constructed, due to its recursive nature.
+
+### 3. 1 Spiral
 
 TBD
 
-### 3. 2 Fractal 
+### 3. 2 Fractal
 
 ## 4. Topics
 
-1. **Pointers**
-    - To store the graph information in interconnected objects
-2. **Threads**
-   - Graph creation
-4. **Signals**
-    - To correctly pause or stop the simulation.
-5. **Dynamic Memory**
-    - To store the graph information in an vector
+1. **File IO**
+    - To make various processing requests for many figures
+2. **Functional Programming**
+   - Due to the figures that we want to draw, functional programming makes sense as a solution to the problem
+3. **Recursion**
+    - Because of the recursive nature of fractal figures and other types of figures, functional programming is an option that makes sense
 
 ## 5. Use Cases
 
-The programs serves the pupose of being a close representation of a virus outburst in a static network environment. It is quite useful because it allows for different snapshots to be analyzed at different points in time.
+The program serves as a study to analize behaviour of fractals contruction, and to deepen knowledge on recursion and its applications
 
 ## 6. Dependencies
 
-- C++ environment (gpp 2.0+)
-- [SFML library](https://www.sfml-dev.org/tutorials/2.5/start-linux.php)
-- cmake (3.1 minimum)
+- Racket
+- drracket
 
 ## 7. Running the program
 
-Read the [TemplateInstructions](https://github.com/yannlelorier/Covid-19-tracker-simulator/blob/master/TemplateInstructions.txt) file to modify the [Nodes](https://github.com/yannlelorier/Covid-19-tracker-simulator/blob/master/Nodes.txt) file to your liking.
-
-~~~sh
-mkdir build && cd build
-cmake ..
-make
-./program-name -i <inputFilename>
-~~~
+In  the main file (TBD)
 
 ## References
-
-[Stochastic simulations of Epidemics](https://link.springer.com/content/pdf/bbm%3A978-3-319-50806-1%2F1.pdf), I.Z. Kiss et al., *Mathematics of Epidemics on Networks*, Interdisciplinary Applied
-Mathematics 46, DOI 10.1007/978-3-319-50806-1
