@@ -1,1 +1,4 @@
 #INSTRUCTIONS FOR INPUT FILE#
+In the .txt files, you are able to change the number of levels for the algorithms to calculate. NOTE: Calculation is possible until yoour PC's resources are completely used, but most Operating Systems only show up to a certain ammount of objects on an SVG file; it has been identified that the maximum input numbers for UNIX based systems is Koch = 5 and Sierpinski = 9.
+If you want to use the provided template, it is only necessary to change the numbers located at line 2 and 4 (each value corresponds to the function referenced in lines 1 and 3).
+If a custom template is desired, copy the Configurations.txt file, rename it and change the values to its desired 

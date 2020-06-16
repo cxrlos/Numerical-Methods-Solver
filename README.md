@@ -52,7 +52,6 @@ The program serves as a study to analyze behavior of fractals construction, and 
 
 - Racket
 - 2htdp package
-- DrRacket (for visualization purposes)
 
 ## 7. Running the program
 

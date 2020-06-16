@@ -1,5 +1,0 @@
-model,iterations
-ko,7
-si,100
-ko,3
-si,50
