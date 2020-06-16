@@ -39,13 +39,19 @@
     (define data (call-with-input-file input_file lines->list))
     
     (writeln 'Processing_Koch...)
+    ; Defines the image as the koch function call
     (define koch_image (koch (list-ref data 1)))
+    ; Background for output image
     (define koch_back (rectangle (image-width koch_image) (image-height koch_image) "solid" "white"))
+    ; Saves file
     (save-svg-image (overlay/align "center" "bottom" koch_image koch_back) "koch.svg")
 
     (writeln 'Processing_Sierpinski...)
+    ; Defines the image as the sierpinski function call
     (define sierpinski_image (sierpinski (list-ref data 3)))
+    ; Background for output image
     (define sierpinski_back (rectangle (image-width sierpinski_image) (image-height sierpinski_image) "solid" "white"))
+    ; Saves file
     (save-svg-image (overlay/align "center" "bottom" sierpinski_image sierpinski_back) "sierpinski.svg")
 
     (fprintf (current-output-port)"\nAll done! The images will be contained where the scripts are located.\n\n"))
