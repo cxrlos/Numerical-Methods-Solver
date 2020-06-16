@@ -1,3 +1,16 @@
+#|------------------------------------------------- Functions.rkt ---------
+    |   Purpose: Reads the input file, stores it and calls the functions.
+    |
+    |   Functions:
+    |       lines->list - Reads the file ans stores it into a list.
+    |       generate_fractals - Calls the functions from Functions.rkt
+    |
+    |   Developers:  
+    |       Carlos García - https://github.com/cxrlos
+    |       Yann Le Lorier - https://github.com/yannlelorier
+    |
+    *--------------------------------------------------------------------|#
+
 #lang racket
 (require "Functions.rkt")
 (require 2htdp/image)
@@ -35,4 +48,4 @@
     (define sierpinski_back (rectangle (image-width sierpinski_image) (image-height sierpinski_image) "solid" "white"))
     (save-svg-image (overlay/align "center" "bottom" sierpinski_image sierpinski_back) "sierpinski.svg")
 
-    (fprintf (current-output-port)"\nAll done! The images will be contained where the scripts are located."))
+    (fprintf generate_fractals(current-output-port)"\nAll done! The images will be contained where the scripts are located."))
