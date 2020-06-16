@@ -1,4 +1,4 @@
 #KOCH#
 5
 #SIERPINSKI#
-9
+7
