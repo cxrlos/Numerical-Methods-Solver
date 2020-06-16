@@ -46,6 +46,6 @@
     (writeln 'Processing_Sierpinski...)
     (define sierpinski_image (sierpinski (list-ref data 3)))
     (define sierpinski_back (rectangle (image-width sierpinski_image) (image-height sierpinski_image) "solid" "white"))
-    (save-svg-image (overlay/align "center" "bottom" sierpinski_image sierpinski_back) "sierpinski.svg")
+    (save-svg-image (overlay/align "center" "bottom" sierpinski_image sierpinski_back) "sierpinski.svg"))
 
-    (fprintf generate_fractals(current-output-port)"\nAll done! The images will be contained where the scripts are located."))
+    ; (fprintf generate_fractals(current-output-port)"\nAll done! The images will be contained where the scripts are located."))
